@@ -1,0 +1,60 @@
+# .gitignore
+
+### Flask and Python Files
+
+* __pycache__/
+* *.py[cod]
+* *.pyo
+* *.pyd
+* .python-version
+
+### Byte-compiled Python Files
+
+* *.pyc
+* *.pyo
+* *.pyd
+
+### Flask and Python Logs
+
+* *.log
+* logs/
+
+### Virtual Environment Files
+
+venv/
+* .venv/
+* env/
+* .env/
+
+### IDE and Editor Files
+
+* .vscode/
+* .idea/
+* .eclipse/
+* .netbeans/
+* .intellij/
+
+### Operating System Files
+
+* .DS_Store
+* Thumbs.db
+* .AppleDouble
+* .LSOverride
+
+### Miscellaneous Files
+
+* .gitattributes
+* .coveragerc
+* .env
+* .flaskenv
+* requirements.txt
+* Pipfile
+* Pipfile.lock
+* .pytest_cache/
+* .mypy_cache/
+* .tox/
+* .nox/
+* .hypothesis/
+* .ipynb_checkpoints/
+* .jupyter/
+* .notebook/
