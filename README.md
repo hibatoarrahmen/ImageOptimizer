@@ -1,6 +1,6 @@
 # Image Optimizer
 
-Image Optimizer is a Flask-based REST API that allows users to upload images, compress them using OpenCV, and download the compressed images. This application ensures that only valid image files are processed and allows users to specify the compression quality.
+Image Optimizer is a web application that allows users to upload images, compress them using OpenCV, and download the compressed images. The application consists of a Flask-based REST API backend and a React-based frontend.
 
 ## Features
 
@@ -14,15 +14,16 @@ Image Optimizer is a Flask-based REST API that allows users to upload images, co
 ### Prerequisites
 
 - Python 3.6 or higher
+- Node.js and npm
 - pip (Python package installer)
 
-### Steps
+### Backend Setup
 
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/image-optimizer.git
-   cd image-optimizer
+   git clone https://github.com/hibatoarrahmen/ImageOptimizer.git
+   cd imageoptimizer.app
    ```
 
 2. Create a virtual environment:
@@ -73,22 +74,38 @@ Image Optimizer is a Flask-based REST API that allows users to upload images, co
 
    The application will be available at `http://127.0.0.1:5000/`.
 
-## Usage
+### Frontend Setup
 
-### Upload and Compress an Image
+1. Navigate to the frontend directory:
 
-Send a POST request to `/upload` with the image file and optional quality parameter.
+   ```sh
+   cd ../imageoptimizer.web
+   ```
 
-- **URL**: `/upload`
-- **Method**: `POST`
-- **Form Data**:
-  - `image` (required): The image file to be uploaded.
-  - `quality` (optional): The quality for image compression (0-100). Default is 90.
+2. Install the required packages:
 
-### Example
+   ```sh
+   npm install
+   ```
 
-Using `curl`:
+3. Start the development server:
 
-```sh
-curl -X POST -F "image=@path/to/your/image.jpg" -F "quality=80" http://127.0.0.1:5000/upload --output compressed_image.jpg
-```
+   ```sh
+   npm run dev
+   ```
+
+   The application will be available at `http://localhost:3000/`.
+
+## Development
+
+### Backend
+
+The backend is a Flask application located in the imageoptimizer.app directory. The main entry point is run.py.
+
+### Frontend
+
+The frontend is a React application located in the imageoptimizer.web directory. The main entry point is main.jsx.
+
+### Contributing
+
+Contributions are welcome! Please follow the standard guidelines for contributing to open-source projects.
